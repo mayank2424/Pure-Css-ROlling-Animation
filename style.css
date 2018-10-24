@@ -1,0 +1,81 @@
+body{
+	background:black;
+}
+
+.div1{
+	height:200px;
+	width:200px;
+	border:2px solid white;
+	text-align:center;
+	border-radius:0;
+	background:white;
+	margin:100px auto;
+    animation-name: in;
+	animation-duration: 0.4s;
+	 animation-iteration-count: infinite;
+     transition-property: border-radius,transform,background;
+    transition-duration: 2s, 0.5s,1s,3s;
+    transition-timing-function: linear;
+    box-shadow: 0;
+}
+
+.div1:hover{
+	animation-name: rotate;
+	animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+	    /*animation-direction: alternate;*/
+    animation-timing-function: linear;
+    border-radius:45%;
+    border:10px solid #fff;
+    background:#161616;
+    /*background:linear-gradient(#f0f,#0ff)*/
+  box-shadow:
+        0 0 50px #fff,            /* outer white */
+        -10px 0 80px #f0f,        /* outer left magenta */
+        10px 0 80px #0ff;        /* outer right cyan */
+}
+
+.div2{
+   height:200px;
+	width:200px;
+	border:2px solid white;
+	text-align:center;
+	border-radius:0;
+	background:white;
+	margin:100px 150px;
+    animation-name: in;
+	animation-duration: 0.4s;
+	 animation-iteration-count: infinite;
+     transition-property: border-radius,transform,background,margin-left;
+    transition-duration: 2s, 0.5s,1s,3s;
+    transition-timing-function: linear;
+    box-shadow: 0;
+}
+
+.div2:hover{
+	animation-name: rotate;
+	animation-duration: 0.4s;
+	animation-iteration-count: infinite;
+	    animation-direction:alternate-reverse;
+    animation-timing-function: linear;
+    border-radius:45%;
+    border:10px solid #fff;
+    background:#161616;
+    margin-left:400px;
+    background:linear-gradient(#f0f,#0ff);
+    box-shadow:
+        0 0 50px #de1b1b,            /* outer white */
+        -10px 0 80px #1171bd,        /* outer left magenta */
+        10px 0 80px #1171bd; 
+}
+
+@keyframes in{
+	from{from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
